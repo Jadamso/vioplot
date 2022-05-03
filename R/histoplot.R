@@ -336,11 +336,10 @@ histoplot.default <-
     height <- vector(mode = "list", length = n)
     area_check <- vector(mode = "list", length = n)
     baserange <- c(Inf, -Inf)
-    args <- list(plot = FALSE)
+    args <- list(plot = FALSE, breaks = breaks)
     radj <- ifelse(side == "right", 0, 1)
     ladj <- ifelse(side == "left", 0, 1)
     boxwex <- wex
-    if (!(is.null(breaks))) { args <- c(args, breaks = breaks) }
     if(areaEqual){
       for (i in 1:n) {
         data <- unlist(datas[[i]])
